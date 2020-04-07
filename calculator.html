@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+        <title>Calculator</title>
+    <style>
+        *{
+            margin: 0
+        }
+        header {background: rgb(47,34,39);
+                background: radial-gradient(circle, rgba(47,34,39,1) 0%, rgba(28,53,56,1) 100%);
+                height: 75px;
+               color:rgb(204, 183, 183);
+               height:150px;
+               font-style:italic;
+               font-family: sans-serif,monospace,cursive;
+               font-size:25px;    
+               text-transform:capitalize;
+               letter-spacing:7px;
+               
+               padding-bottom:0px;
+               padding-top:40px;
+               padding-left:20px;
+               padding-right:20px;
+               margin-bottom:20px;
+        }
+        body {color:rgb(204, 183, 183);
+              font-family: sans-serif,monospace,cursive;
+            background: rgb(51,58,65);
+                background: linear-gradient(90deg, rgba(51,58,65,1) 12%, rgba(190,46,73,1) 100%, rgba(83,97,95,1) 100%);
+           
+        }
+        p { margin-top:30PX;margin-bottom:30px;margin-left:20px
+        }
+        
+        div  {font-size:20px;
+              padding-left:500px;
+              border:solid;
+              border-color: rgb(62, 13, 13);
+              border-radius:30px ;
+              border-width: thick ;
+              border-top-left-radius: 20;
+              padding-bottom:100px ;
+              padding-top:100px;
+              padding-left: 500px;
+              padding-right: 200px;
+              margin:30px;
+            
+        }
+        #George {font-size:18px; text-align:center;letter-spacing:5px;
+        
+        
+        }
+        #num1 {font-size:15px; height:20px;margin-top:10px;margin-bottom:20px;
+        }
+        #num2 {font-size:15px;height:20px;margin-top: 10px;margin-bottom:20px}
+        select {font-size:15px;margin:10px;margin-bottom:20px;margin-left:1px;
+        }
+        button {font-size: 15px ;width:100px;margin-top: 10px;font:bold;
+        }
+        #result {font-size:30px;
+            
+        }
+        footer {background: rgb(47,34,39);
+                background: radial-gradient(circle, rgba(47,34,39,1) 0%, rgba(28,53,56,1) 100%);
+                height: 200px;
+                padding:10px; margin-bottom:0px;
+                
+            
+            
+        }
+        
+        a {font-size:20px;text-decoration:none;color:rgb(204, 183, 183);
+            
+        }
+        a:hover {
+            font-size: 30px
+        
+        }
+         li {list-style-type:none;
+             margin: auto;
+             padding: 15px;
+             text-align: center;
+             
+             
+        }
+        
+    </style>
+    </head>
+<body>
+    <header>
+        Online calculator
+        <p>"Life is like riding a bicycle. To keep your balance, you must keep moving."</p>
+        
+        </header>
+        <p id="George">Hey George are kidding with me?... it's easy practice</p>
+        <div id="calc">
+        
+        <label>first number</label><br>
+        <input type="number" id="num1"><br><br>
+        <label>second number</label><br>
+        <input type="number" id="num2"><br><br>
+        <label>choose the operation</label><br>
+        <form>
+        <select  id="mySelect">
+            <option value="+"> sum(+)</option>
+            <option value="-">Subtraction(-)</option>
+            <option value="*">multiply(*)</option>
+            <option value="/">division(/)</option>
+        </select>
+          </form>
+            <br>    
+            <button onclick="myFunction()">calculate</button>
+            <p id="result"></p>
+        </div>
+            
+    <p></p>
+    <footer>
+        <nav>
+            <li><a href=# >contact us</a></li>
+            <li><a href=#>login</a></li>
+            <li><a href=#>adress</a></li>
+            <li><a href=#>term of us</a></li>
+        </nav>
+    </footer>
+    <script>
+        function myFunction() { 
+         var a = document.getElementById("num1").value;
+         var b = document.getElementById("num2").value;
+         var x = document.getElementById("mySelect").value; 
+         var z = "the result is ";
+            if (x == "+")
+                document.getElementById("result").innerHTML = z + (+a + +b);
+           else if (x == "-")
+               document.getElementById("result").innerHTML = z + (+a - +b);
+            else if (x == "*")
+                document.getElementById("result").innerHTML = z + (+a * +b);
+            else if (x == "/")
+                document.getElementById("result").innerHTML = z + (+a / +b);
+    
+        }
+        
+    </script>
+    </body>
+
+</html>
+
+
+
+
+
